@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+html, body {
+    overflow-x: hidden;
+}
 
 body {
     color: #2F9E9A;
