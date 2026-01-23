@@ -292,7 +292,6 @@ p {
 .results {
     padding: 80px 0;
     background: #0a2540;
-    color: #0a2540;
     text-align: center;
     position: relative;
 }
@@ -311,6 +310,7 @@ p {
 
 .results .section-title {
     font-size: 36px;
+    color: white;
     font-weight: 700;
     margin-bottom: 50px;
     position: relative;
@@ -327,15 +327,14 @@ p {
 }
 
 .result-box {
-    background: #ffffff;
-    padding: 50px 20px;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    background: transparent; /* no box */
+    padding: 0;              /* remove extra padding */
+    border-radius: 0;         /* no rounded corners */
+    box-shadow: none;         /* remove shadow */
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease-out;
     position: relative;
-    overflow: hidden;
 }
 
 .result-box.visible {
@@ -343,46 +342,30 @@ p {
     transform: translateY(0);
 }
 
-.result-box::before {
-    content: "";
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    background: rgba(47,158,154,0.1);
-    border-radius: 50%;
-    top: -40px;
-    right: -40px;
-    z-index: 0;
-}
-
 .result-box h3 {
-    font-size: 42px;
+    font-size: 50px;
     font-weight: 800;
     color: #2F9E9A;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: flex;
-    align-items: flex-end; /* aligns numbers and symbols nicely */
+    align-items: flex-end;
     justify-content: center;
 }
 
-
+.result-box h3 .symbol {
+    font-size: 28px;
+    margin-left: 5px;
+    line-height: 1;
+}
 .result-box h3 .number {
     font-size: 42px;
     font-weight: 800;
     line-height: 1;
 }
 
-.result-box h3 .symbol {
-    font-size: 24px;       /* smaller symbol size */
-    font-weight: 700;
-    margin-left: 5px;
-    color: #2F9E9A;
-    line-height: 1;
-}
-
 .result-box p {
     font-size: 16px;
-    color: #444;
+    color: #f4f7fb;
     position: relative;
     z-index: 1;
 }
