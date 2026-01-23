@@ -8,10 +8,33 @@
 html, body {
     overflow-x: hidden;
 }
-
 body {
-    color: #2F9E9A;
+    font-family: 'Inter', sans-serif;
+    color: #0a2540;
     line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
 }
 
 .container {
@@ -231,13 +254,16 @@ body {
 }
 
 .hero-content h2 {
-    font-size: 55px;
-    margin-bottom: 15px;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
 }
 
 .hero-content h3 {
     font-size: 22px;
-    margin-bottom: 15px;
+    font-weight: 400;
+    color: #e0f2f1;
+    margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
@@ -248,17 +274,68 @@ body {
 
 .hero-content .primary-btn {
     background: #2F9E9A;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
+    color: white;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     transition: background 0.3s;
 }
 
 .hero-content .primary-btn:hover {
     background: #0050aa;
 }
+
+.results {
+    padding: 100px 0;
+    background: #0a2540;
+    color: white;
+}
+
+.results .section-title {
+    color: white;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.result-box {
+    text-align: center;
+}
+
+.result-box h3 {
+    font-size: 56px;
+    font-weight: 800;
+    color: #2F9E9A;
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    font-size: 16px;
+    color: #e0e0e0;
+    max-width: 220px;
+    margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* ================= WHO WE SERVE ================= */
 .who-serve {
@@ -329,10 +406,10 @@ body {
 /* ================= SECTIONS ================= */
 .section-title {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
+    margin-bottom: 60px;
+    font-size: 44px;
     color: #2F9E9A;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .services,
