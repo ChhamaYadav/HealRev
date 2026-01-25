@@ -476,68 +476,120 @@ p {
     padding: 80px 0;
 }
 
-/* SERVICES SECTION */
+/* ================= SERVICES ================= */
+
 .services {
-    padding: 80px 0;
+    padding: 100px 0;
+    background: #f4f7fb;
 }
 
-.service-row {
+/* Section Title */
+.services .section-title {
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: #0a2540;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.services .section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #2F9E9A;
+    margin: 18px auto 0;
+    border-radius: 3px;
+}
+
+/* Service Card */
+.services .service-row {
     display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 70px;
+    align-items: stretch;
+    margin-bottom: 60px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Reverse layout */
-.service-row.reverse {
+.services .service-row:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+.services .service-row.reverse {
     flex-direction: row-reverse;
 }
 
 /* Image */
-.service-image {
+.services .service-image {
     width: 45%;
-    min-height: 280px;
+    min-height: 320px;
     background-size: cover;
     background-position: center;
     position: relative;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
-.service-image h3 {
+.services .service-image::after {
+    content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(10,37,64,0.85),
+        rgba(10,37,64,0.15)
+    );
+}
+
+.services .service-image h3 {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
     margin: 0;
-    padding: 18px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    font-size: 1.4rem;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: white;
 }
 
+.services .service-image h3 {
+    color: #ffffff;
+}
 /* Text */
-.service-text {
+.services .service-text {
     width: 55%;
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.service-text p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: #333;
+/* Service Description (KEY FIX) */
+.services .service-text p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #425466;
+    font-weight: 400;
+    max-width: 520px;
+    margin-bottom: 30px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .service-row,
-    .service-row.reverse {
-        flex-direction: column;
-    }
+/* Learn More */
+.services .learn-more {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #2F9E9A;
+    text-decoration: none;
+}
 
-    .service-image,
-    .service-text {
-        width: 100%;
-    }
+.services .learn-more:hover {
+    color: #0a2540;
 }
 /* ================= WHO WE ARE ================= */
 
