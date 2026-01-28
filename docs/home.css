@@ -731,17 +731,17 @@ p {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 60px;
+    grid-template-columns: 40% 50%;
+    gap: 40px;
     align-items: center;
 }
 
 /* LEFT SIDE */
 .testimonials-left .section-title {
-    text-align: left;
+    text-align: center;
     font-size: 46px;
     color: #0a2540;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .testimonials-subtext {
