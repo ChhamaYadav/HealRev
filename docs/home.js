@@ -109,4 +109,25 @@ results.forEach(result => {
     observer.observe(result);
 });
 
+const track = document.querySelector(".testimonial-track");
+const trackslides = document.querySelectorAll(".testimonial-card");
+const nextBtn = document.getElementById("nextTestimonial");
+const prevBtn = document.getElementById("prevTestimonial");
+
+let index = 0;
+
+function updateSlider() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+nextBtn.addEventListener("click", () => {
+    index = (index + 1) % trackslides.length;
+    updateSlider();
+});
+
+prevBtn.addEventListener("click", () => {
+    index = (index - 1 + trackslides.length) % trackslides.length;
+    updateSlider();
+});
+
 
