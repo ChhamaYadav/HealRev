@@ -391,69 +391,90 @@ p {
     }
 }
 
-/* ================= WHO WE SERVE ================= */
 .who-serve {
-    padding: 80px 0;
+    padding: 40px 0px ;
     background: #f4f7fb;
 }
 
 .serve-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 50px;
 }
 
 .serve-card {
-    background: #ffffff;
-    padding: 20px 20px;
-    border-radius: 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
     cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.serve-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.serve-card h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #2F9E9A;
-    font-size: 1.4rem;
-}
-
-.serve-card p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #2F9E9A;
-    font-weight: 700px;
-}
-
-/* Hover Effect */
 .serve-card:hover {
     transform: translateY(-10px);
-    background: #0a2540;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
 }
 
-.serve-card:hover h3,
-.serve-card:hover p {
-    color: #ffffff;
+/* Title always visible */
+.title-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 2;
+    transition: transform 0.4s ease, opacity 0.8s ease;
+}
+
+.title-bg h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.serve-card:hover .title-bg {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.serve-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65); /* dark overlay */
+    color: #fff;
+    opacity: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.4s ease;
+    z-index: 1; /* behind title */
+}
+
+.serve-card:hover .serve-overlay {
+    opacity: 1;
+}
+
+.serve-overlay p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Responsive */
 @media (max-width: 992px) {
-    .serve-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
     .serve-grid {
         grid-template-columns: 1fr;
     }
