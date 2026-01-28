@@ -109,25 +109,46 @@ results.forEach(result => {
     observer.observe(result);
 });
 
-const track = document.querySelector(".testimonial-track");
-const trackslides = document.querySelectorAll(".testimonial-card");
-const nextBtn = document.getElementById("nextTestimonial");
-const prevBtn = document.getElementById("prevTestimonial");
+// ================= TESTIMONIAL FADE + SLIDE =================
 
-let index = 0;
+const testimonials = document.querySelectorAll(".testimonial-card");
+const nextTestimonial = document.getElementById("nextTestimonial");
+const prevTestimonial = document.getElementById("prevTestimonial");
 
-function updateSlider() {
-    track.style.transform = `translateX(-${index * 100}%)`;
+let testimonialIndex = 0;
+
+function showTestimonial(newIndex, direction) {
+    const current = testimonials[testimonialIndex];
+    const next = testimonials[newIndex];
+
+    current.classList.remove("active");
+    current.classList.add(direction === "next" ? "exit-left" : "");
+
+    setTimeout(() => {
+        current.classList.remove("exit-left");
+        next.classList.add("active");
+    }, 50);
+
+    testimonialIndex = newIndex;
 }
 
-nextBtn.addEventListener("click", () => {
-    index = (index + 1) % trackslides.length;
-    updateSlider();
+nextTestimonial.addEventListener("click", () => {
+    const newIndex = (testimonialIndex + 1) % testimonials.length;
+    showTestimonial(newIndex, "next");
 });
 
-prevBtn.addEventListener("click", () => {
-    index = (index - 1 + trackslides.length) % trackslides.length;
-    updateSlider();
+prevTestimonial.addEventListener("click", () => {
+    const newIndex =
+        (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(newIndex, "prev");
 });
+setInterval(() => {
+    const newIndex = (testimonialIndex + 1) % testimonials.length;
+    showTestimonial(newIndex, "next");
+}, 6000);
+
+
+
+
 
 
