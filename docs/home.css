@@ -521,11 +521,11 @@ p {
     padding: 80px 0;
 }
 
-/* ================= SERVICES ================= */
-
+/* ================= SERVICES SECTION ================= */
 .services {
-    padding: 20px 0;
+    padding: 60px 0;
     background: #f4f7fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Section Title */
@@ -534,7 +534,8 @@ p {
     font-weight: 700;
     letter-spacing: -0.8px;
     color: #0a2540;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
+    text-align: center;
     position: relative;
 }
 
@@ -548,7 +549,19 @@ p {
     border-radius: 3px;
 }
 
-/* Service Card */
+/* Section Intro Paragraph */
+.services .section-intro {
+    text-align: center;
+    font-size: 20px;
+    color: #425466;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Service Row */
 .services .service-row {
     display: flex;
     align-items: stretch;
@@ -565,42 +578,42 @@ p {
     box-shadow: 0 30px 60px rgba(0,0,0,0.12);
 }
 
+/* Reverse layout for alternate image */
 .services .service-row.reverse {
     flex-direction: row-reverse;
 }
 
-/* Image */
+/* Service Image */
 .services .service-image {
     width: 45%;
     min-height: 320px;
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
 }
 
 .services .service-image::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(10,37,64,0.85),
-        rgba(10,37,64,0.15)
-    );
+    background: linear-gradient(to top, rgba(10,37,64,0.85), rgba(10,37,64,0.15));
+    border-radius: 0px;
 }
 
+/* Heading on Image */
 .services .service-image h3 {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    right: 25px;
+    position: relative;
     margin: 0;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.25;
-    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
 }
-/* Text */
+
+/* Service Text */
 .services .service-text {
     width: 55%;
     padding: 55px;
@@ -609,29 +622,66 @@ p {
     justify-content: center;
 }
 
-/* Service Description (KEY FIX) */
+/* Service Text Paragraph */
 .services .service-text p {
-    font-size: 27px;
-    line-height: 1.9;
+    font-size: 20px;
+    line-height: 1.8;
     color: #425466;
-    font-weight: 400;
-    max-width: 520px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-/* Learn More */
+/* Learn More Button */
 .services .learn-more {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #2F9E9A;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .services .learn-more:hover {
     color: #0a2540;
 }
+
+/* ================= GRID / RESPONSIVE ================= */
+@media (max-width: 991px) {
+    .services .service-row,
+    .services .service-row.reverse {
+        flex-direction: column;
+    }
+
+    .services .service-image,
+    .services .service-text {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .services .service-image {
+        min-height: 250px;
+    }
+
+    .services .service-image h3 {
+        font-size: 24px;
+    }
+
+    .services .service-text p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    .services .section-title {
+        font-size: 36px;
+    }
+
+    .services .section-intro {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+}
+
 /* ================= WHO WE ARE ================= */
 
 .about {
@@ -718,9 +768,25 @@ p {
 
 /* CTA */
 .cta {
-    background: #2F9E9A;
+    background: #44a8a4;
     color: white;
     text-align: center;
+}
+
+.cta .primary-btn {
+    background: #2F9E9A;
+    color: white;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.3s;
+}
+
+.cta .primary-btn:hover {
+    background: #0050aa;
 }
 
 /* Footer */
