@@ -977,8 +977,17 @@ p {
   background: rgba(0,0,0,0.6);
 }
 
+.modal-content.large h2 {
+  text-align: center;
+  background: #2F9E9A;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
 /* Bigger modal */
-.modal-content.large {
+/*.modal-content.large {
   background: #fff;
   width: 80%;
   max-width: 900px;
@@ -986,7 +995,7 @@ p {
   padding: 30px;
   border-radius: 10px;
   position: relative;
-}
+}*/
 
 /* Close button */
 .close {
@@ -995,6 +1004,24 @@ p {
   top: 15px;
   font-size: 24px;
   cursor: pointer;
+}
+
+.demo-form button:hover {
+  background: #1f5fb5;
+}
+
+.modal-content.large {
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+              url('images/mission.jpg');
+  background-size: cover;
+  background-position: center;
+
+  width: 80%;
+  max-width: 900px;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
 }
 
 /* Grid layout */
@@ -1021,12 +1048,15 @@ p {
 
 /* Button */
 .demo-form button {
-  margin-top: 15px;
+  margin: 20px auto 0;
   padding: 12px;
-  background: #2a7de1;
+  background: #2F9E9A;
   color: white;
   border: none;
   width: 200px;
+  display: block;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Mobile responsive */
