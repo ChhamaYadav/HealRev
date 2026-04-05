@@ -57,7 +57,7 @@
 
         <!-- Right: CTA Button -->
         <div class="header-btn">
-            <a href="#contact" class="primary-btn">Schedule a demo</a>
+            <a href="#" class="primary-btn demo-trigger">Schedule a demo</a>
         </div>
     </div>
 </header>
@@ -276,51 +276,46 @@
 
         <!-- Service 1 -->
         <div class="service-row">
-            <div class="service-image" style="background-image:url('images/doc1.jpg');"></div>
+            <div class="service-image" style="background-image:url('images/revenue_Cycle_Management.jpg');"></div>
             <div class="service-text">
                 <h3 style="color:#2F9E9A;">Revenue Cycle Management</h3>
                 <p>We manage your entire billing lifecycle — from patient intake to final payment — improving cash flow and reducing claim denials.</p>
-                <a href="services/revenue-cycle-management.html" class="learn-more">Learn More →</a>
             </div>
         </div>
 
         <!-- Service 2 -->
         <div class="service-row reverse">
-            <div class="service-image" style="background-image:url('images/doc2.jpg');"></div>
+            <div class="service-image" style="background-image:url('images/patient.jpg');"></div>
             <div class="service-text">
                 <h3 style="color:#2F9E9A;">Patient Access & Eligibility</h3>
                 <p>Accurate patient data and insurance verification at first interaction to prevent denials and strengthen revenue cycle performance.</p>
-                <a href="services/revenue-cycle-management.html" class="learn-more">Learn More →</a>
             </div>
         </div>
 
         <!-- Service 3 -->
         <div class="service-row">
-            <div class="service-image" style="background-image:url('images/doc3.jpg');"></div>
+            <div class="service-image" style="background-image:url('images/bills.jpg');"></div>
             <div class="service-text">
                 <h3 style="color:#2F9E9A;">Billing & A/R Management</h3>
                 <p>Dedicated follow-ups, denial management, and collections strategies to keep accounts receivable under control.</p>
-                <a href="services/revenue-cycle-management.html" class="learn-more">Learn More →</a>
             </div>
         </div>
 
         <!-- Service 4 -->
         <div class="service-row reverse">
-            <div class="service-image" style="background-image:url('images/doc4.jpg');"></div>
+            <div class="service-image" style="background-image:url('images/medical documentation.jpg');"></div>
             <div class="service-text">
                 <h3 style="color:#2F9E9A;">Medical Coding & Documentation</h3>
                 <p>Certified coding specialists ensure accuracy, compliance, and proper documentation for faster reimbursements.</p>
-                <a href="services/revenue-cycle-management.html" class="learn-more">Learn More →</a>
             </div>
         </div>
 
         <!-- Service 5 -->
         <div class="service-row">
-            <div class="service-image" style="background-image:url('images/doc5.jpg');"></div>
+            <div class="service-image" style="background-image:url('images/provider.jpg');"></div>
             <div class="service-text">
                 <h3 style="color:#2F9E9A;">Provider Credentialing</h3>
                 <p>Complete provider enrollment, insurance panel setup, renewals, and state registrations handled end-to-end.</p>
-                <a href="services/revenue-cycle-management.html" class="learn-more">Learn More →</a>
             </div>
         </div>
     </div>
@@ -385,7 +380,7 @@
 <section class="cta">
     <div class="container cta-content">
         <h2>Ready to Transform Your Revenue?</h2>
-        <button class="primary-btn">Get Started</button>
+        <button class="primary-btn demo-trigger">Get Started</button>
     </div>
 </section>
 
@@ -416,6 +411,84 @@
         <p>© 2026 HealRev. All rights reserved.</p>
     </div>
 </footer>
+<div id="demoModal" class="modal">
+    <div class="modal-content large">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <h2>Schedule a Demo</h2>
+
+        <form class="demo-form" action="https://formsubmit.co/Office.healrev@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="thankyou.html">
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <input type="text" name="company_name" required>
+                    <label>Company Name</label>
+                </div>
+
+                <div class="input-group">
+                    <select name="speciality" required>
+                        <option value="" disabled selected hidden></option>
+                        <option>Cardiology</option>
+                        <option>Dermatology</option>
+                    </select>
+                    <label>Specialty*</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" name="first_name" required>
+                    <label>First Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" name="last_name" required>
+                    <label>Last Name*</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" name="telephone" required>
+                    <label>Phone Number</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email"  name="email" required>
+                    <label>Email*</label>
+                </div>
+
+                <div class="input-group">
+                    <select name="providers" required>
+                        <option value="" disabled selected hidden></option>
+                        <option>1-5</option>
+                        <option>6-10</option>
+                        <option>10+</option>
+                    </select>
+                    <label>Number of Providers</label>
+                </div>
+
+                <div class="input-group">
+                    <select name="location" required>
+                        <option value="" disabled selected hidden></option>
+                        <option>1</option>
+                        <option>2-5</option>
+                        <option>5+</option>
+                    </select>
+                    <label>Number of Locations</label>
+                </div>
+
+            </div>
+
+            <div class="input-group full">
+                <textarea name="resource" required></textarea>
+                <label>Where did you hear about us?</label>
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
+</div>
 
 <!-- JS -->
 <script src="home.js"></script>
