@@ -528,8 +528,6 @@ p {
 }
 
 /* ================= SERVICES SECTION ================= */
-/* ================= PREMIUM SERVICES SECTION ================= */
-
 .services {
     padding: 100px 0;
     background: linear-gradient(to bottom, #f4f7fb, #eef3f9);
@@ -738,6 +736,39 @@ p {
     .services .service-text p {
         font-size: 16px;
     }
+}
+
+.service-text-premium {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #425466;
+    margin-bottom: 20px;
+    max-width: 520px;
+    position: relative;
+}
+
+/* first line emphasis */
+.service-text-premium::first-line {
+    font-weight: 600;
+    color: #0a2540;
+}
+
+/* highlight words */
+.service-text-premium .highlight {
+    color: #2F9E9A;
+    font-weight: 600;
+}
+
+/* subtle left accent line */
+.service-text-premium::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    width: 3px;
+    height: 80%;
+    background: linear-gradient(to bottom, #2F9E9A, transparent);
+    border-radius: 10px;
 }
 
 @media (max-width: 575px) {
