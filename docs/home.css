@@ -58,11 +58,15 @@ p {
     display: flex;
     align-items: center; /* vertically centers logo and nav */
     justify-content: space-between;
+    padding: 15px 20px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .logo img {
-    height: 120px; /* bigger logo */
+    height: 100px; /* bigger logo */
     width: auto;
+    margin-left: 5px;
 }
 
 /* Sub Header */
@@ -94,8 +98,10 @@ p {
 .nav a {
     text-decoration: none;
     color: #2F9E9A;
-    font-weight: 900;
-    padding: 8px 12px;
+    font-weight: 500;
+    font-size: 18px;
+
+    padding: 12px 8px;
     transition: color 0.3s;
 }
 
@@ -164,6 +170,7 @@ p {
     text-decoration: none;
     font-weight: 500;
     transition: background 0.3s;
+    margin-right: 15px;
 }
 .header-btn .primary-btn:hover {
     background: #0050aa;
