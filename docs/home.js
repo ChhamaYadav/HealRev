@@ -147,6 +147,33 @@ setInterval(() => {
     showTestimonial(newIndex, "next");
 }, 6000);
 
+// ================= MODAL =================
+
+const modal = document.getElementById("demoModal");
+const demoButtons = document.querySelectorAll(".demo-trigger");
+
+// Open modal from ANY button
+demoButtons.forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; // stop background scroll
+    });
+});
+
+function closeModal() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+// Close when clicking outside
+window.addEventListener("click", function(e) {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+
 
 
 
