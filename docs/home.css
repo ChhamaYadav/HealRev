@@ -165,7 +165,6 @@ p {
     font-weight: 500;
     transition: background 0.3s;
 }
-
 .header-btn .primary-btn:hover {
     background: #0050aa;
 }
@@ -1073,8 +1072,8 @@ p {
 }
 
 .modal-content.large {
-  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
-              url('images/mission.jpg');
+  background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+              url('images/HealRev Logo.png');
   background-size: cover;
   background-position: center;
 
