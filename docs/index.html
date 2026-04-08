@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="home.css" />
 
     <!-- Fonts (optional placeholder) -->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/icon.png">
 </head>
 <body>
 <!-- ================= SUB HEADER ================= -->
@@ -81,7 +83,7 @@
             and stay focused on patient care.
         </p>
         <div class="hero-buttons">
-            <button class="primary-btn">Get a Free Consultation</button>
+            <button class="primary-btn demo-trigger">Get a Free Consultation</button>
         </div>
     </div>
 </section>
@@ -481,7 +483,7 @@
         <h2>Schedule a Demo</h2>
 
         <form class="demo-form" action="https://formsubmit.co/Officehealrev@gmail.com" method="POST">
-            <input type="hidden" name="_next" value="https://chhamayadav.github.io/HealRev/thankyou.html">
+            <input type="hidden" name="_next" value="https://healrev.com/thankyou.html">
             <input type="hidden" name="_captcha" value="false">
             <div class="form-grid">
 
@@ -491,12 +493,8 @@
                 </div>
 
                 <div class="input-group">
-                    <select name="speciality" required>
-                        <option value="" disabled selected hidden></option>
-                        <option>Cardiology</option>
-                        <option>Dermatology</option>
-                    </select>
-                    <label>Specialty*</label>
+                    <input type="text" name="speciality" required>
+                    <label>Speciality</label>
                 </div>
 
                 <div class="input-group">
@@ -506,7 +504,7 @@
 
                 <div class="input-group">
                     <input type="text" name="last_name" required>
-                    <label>Last Name*</label>
+                    <label>Last Name</label>
                 </div>
 
                 <div class="input-group">
