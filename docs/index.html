@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HealRev | Healthcare Solutions</title>
+    <title>HealRev | Healthcare Revenue Cycle Management</title>
     <link rel="stylesheet" href="home.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- UPGRADE 1: Premium font pairing — DM Serif Display (headings) + Inter (body) -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/icon.png">
 </head>
 <body>
@@ -19,6 +21,8 @@
 
 <!-- ================= HEADER ================= -->
 <header class="header">
+    <!-- UPGRADE 2: 3px accent bar at top -->
+    <div class="header-accent-bar"></div>
     <div class="container header-inner">
         <div class="logo">
             <a href="#home">
@@ -37,42 +41,75 @@
                         <li><a href="#billing">Billing & Accounts Receivable (A/R) Management</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#who-we-serve">Who We Serve ▼</a>
+                <li class="dropdown">
+                    <a href="#who-we-serve">Who We Serve ▼</a>
                     <ul class="dropdown-menu">
                         <li><a href="#Independent and Multispecialty Practices">Independent and Multispecialty Practices</a></li>
                         <li><a href="#ASC">Ambulatory Surgical Centers (ASC)</a></li>
-                        <li><a href="#Specialty Clinics">Specialty Clinics (e.g.,Cardiology, Orthopedics)</a></li>
+                        <li><a href="#Specialty Clinics">Specialty Clinics (e.g., Cardiology, Orthopedics)</a></li>
                         <li><a href="#DME">Durable Medical Equipment (DME) Providers</a></li>
                         <li><a href="#Hospital Systems">Hospital Systems and Health Networks</a></li>
                     </ul>
                 </li>
+                <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#insights">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="header-btn">
-            <a href="#" class="primary-btn demo-trigger">Schedule a demo</a>
+            <a href="#" class="primary-btn demo-trigger">Schedule a Demo</a>
         </div>
     </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero-slider" id="home">
-    <div class="slides">
-        <div class="slide active" style="background-image: url('images/doc1.jpg');"></div>
-        <div class="slide" style="background-image: url('images/document.jpg');"></div>
-        <div class="slide" style="background-image: url('images/doc3.jpg');"></div>
-        <div class="slide" style="background-image: url('images/slider-2.jpg');"></div>
-    </div>
+<!-- ================= HERO — static, no slider ================= -->
+<!-- UPGRADE 5: Replace image slider with single powerful static hero -->
+<section class="hero" id="home">
+    <div class="hero-bg" style="background-image: url('images/doc1.jpg');"></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
+        <div class="hero-eyebrow">Trusted Revenue Cycle Management</div>
         <h1>Simplifying Medical Billing for Healthcare Providers</h1>
         <p>We help clinics and practices manage billing, reduce errors, and stay focused on patient care.</p>
         <div class="hero-buttons">
-            <button class="primary-btn demo-trigger">Get a Free Consultation</button>
+            <button class="btn-primary demo-trigger">Get a Free Consultation</button>
+            <a href="#how-it-works" class="btn-ghost">See How It Works</a>
         </div>
     </div>
 </section>
+
+<!-- UPGRADE 3: Trust logos / compliance strip -->
+<!--<section class="trust-strip">-->
+<!--    <div class="container">-->
+<!--        <p class="trust-label">Trusted by leading healthcare organizations &amp; fully compliant with</p>-->
+<!--        <div class="trust-logos">-->
+<!--            <div class="trust-badge">-->
+<!--                <span class="trust-icon">🛡️</span>-->
+<!--                <span>HIPAA Compliant</span>-->
+<!--            </div>-->
+<!--            <div class="trust-divider"></div>-->
+<!--            <div class="trust-badge">-->
+<!--                <span class="trust-icon">🔒</span>-->
+<!--                <span>SOC 2 Type II</span>-->
+<!--            </div>-->
+<!--            <div class="trust-divider"></div>-->
+<!--            <div class="trust-badge">-->
+<!--                <span class="trust-icon">✅</span>-->
+<!--                <span>ICD-10 Certified</span>-->
+<!--            </div>-->
+<!--            <div class="trust-divider"></div>-->
+<!--            <div class="trust-badge">-->
+<!--                <span class="trust-icon">📋</span>-->
+<!--                <span>BAA Available</span>-->
+<!--            </div>-->
+<!--            <div class="trust-divider"></div>-->
+<!--            <div class="trust-badge">-->
+<!--                <span class="trust-icon">⚕️</span>-->
+<!--                <span>HL7 / FHIR Ready</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 <!-- ================= ABOUT ================= -->
 <section class="about" id="about">
@@ -97,6 +134,7 @@
     </div>
 </section>
 
+<!-- ================= RESULTS ================= -->
 <section class="results">
     <div class="container">
         <h2 class="section-title">Our Results Speak for Themselves</h2>
@@ -121,15 +159,55 @@
     </div>
 </section>
 
+<!-- UPGRADE 6: How It Works process section -->
+<section class="how-it-works" id="how-it-works">
+    <div class="container">
+        <div class="hiw-header">
+            <span class="section-eyebrow">Our Process</span>
+            <h2 class="section-title-dark">How It Works</h2>
+            <p class="section-sub">From day one to ongoing collections — a seamless, fully managed process so you can focus on patients.</p>
+        </div>
+        <div class="hiw-steps">
+            <div class="hiw-step">
+                <div class="hiw-number">01</div>
+                <div class="hiw-icon">🤝</div>
+                <h3>Onboard &amp; Credential</h3>
+                <p>We collect your practice details, complete provider credentialing with payers, and configure billing workflows — typically in under 2 weeks.</p>
+            </div>
+            <div class="hiw-connector"></div>
+            <div class="hiw-step">
+                <div class="hiw-number">02</div>
+                <div class="hiw-icon">✅</div>
+                <h3>Verify &amp; Capture</h3>
+                <p>Real-time eligibility checks before every encounter. Charges are captured accurately with correct ICD-10 and CPT codes — first time, every time.</p>
+            </div>
+            <div class="hiw-connector"></div>
+            <div class="hiw-step">
+                <div class="hiw-number">03</div>
+                <div class="hiw-icon">📤</div>
+                <h3>Submit &amp; Follow Up</h3>
+                <p>Claims are submitted within 24 hours of service. Denials are worked proactively — not reactively. Every claim is tracked to resolution.</p>
+            </div>
+            <div class="hiw-connector"></div>
+            <div class="hiw-step">
+                <div class="hiw-number">04</div>
+                <div class="hiw-icon">💰</div>
+                <h3>Collect &amp; Report</h3>
+                <p>Payments are posted and reconciled. You receive clear, actionable financial dashboards — so you always know exactly where your revenue stands.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ================= WHO WE SERVE ================= -->
 <section class="who-serve" id="who-we-serve">
     <div class="container">
         <h2 class="section-title">Who We Serve</h2>
         <div class="serve-grid">
             <div class="serve-card" style="background-image: url('images/multispeciality.jpg')">
-                <div class="title-bg"><h3>Independent & Multispecialty Practices</h3></div>
+                <div class="title-bg"><h3>Independent &amp; Multispecialty Practices</h3></div>
                 <div class="serve-overlay">
-                    <h3>Independent & Multispecialty Practices and ASCs</h3>
+                    <h3>Independent &amp; Multispecialty Practices</h3>
                     <p>We help independent practices streamline billing, reduce denials, and improve revenue cycle efficiency.</p>
                     <ul class="tick-list">
                         <li>Data-driven financial insights</li>
@@ -145,7 +223,7 @@
                 <div class="title-bg"><h3>Ambulatory Surgical Centers (ASC)</h3></div>
                 <div class="serve-overlay">
                     <h3>Ambulatory Surgical Centers (ASC)</h3>
-                    <p>Ambulatory Surgical Centers need efficient, accurate billing to remain profitable and compliant.</p>
+                    <p>Efficient, accurate billing to remain profitable and compliant. Our solutions reduce denials and optimize revenue performance.</p>
                     <ul class="tick-list">
                         <li>Accurate charge capture and coding</li>
                         <li>Faster claims processing and reimbursements</li>
@@ -158,7 +236,7 @@
                 <div class="title-bg"><h3>Specialty Clinics</h3></div>
                 <div class="serve-overlay">
                     <h3>Specialty Clinics</h3>
-                    <p>Specialty clinics require focused revenue cycle strategies that align with their unique workflows.</p>
+                    <p>Focused revenue cycle strategies aligned with unique workflows and payer requirements.</p>
                     <ul class="tick-list">
                         <li>Streamlined claims and payment tracking</li>
                         <li>Insights to improve financial decisions</li>
@@ -171,10 +249,10 @@
                 <div class="title-bg"><h3>Durable Medical Equipment (DME)</h3></div>
                 <div class="serve-overlay">
                     <h3>Durable Medical Equipment (DME)</h3>
-                    <p>DME providers face specialized billing challenges that require expert guidance for smoother workflows.</p>
+                    <p>Specialized billing expertise for smoother workflows, better reimbursements, and regulatory compliance.</p>
                     <ul class="tick-list">
                         <li>Precise and streamlined coding for faster claims</li>
-                        <li>Technology that works seamlessly with your systems</li>
+                        <li>Technology that works with your current systems</li>
                         <li>Insights and expertise from industry specialists</li>
                         <li>Compliance-focused support to maximize reimbursements</li>
                     </ul>
@@ -224,34 +302,30 @@
                 <p class="service-text-premium"><span class="highlight">Transform your entire revenue ecosystem</span> with a fully optimized lifecycle approach. From patient onboarding to final reimbursement, we eliminate bottlenecks, reduce denials, and ensure <span class="highlight">consistent, accelerated cash flow</span>.</p>
             </div>
         </div>
-
         <div class="service-row reverse">
             <div class="service-image"><img src="images/patient.jpg" loading="lazy" alt="Patient Access"></div>
             <div class="service-text">
                 <span class="service-badge">Front Desk Optimization</span>
-                <h3>Patient Access & Eligibility</h3>
+                <h3>Patient Access &amp; Eligibility</h3>
                 <p class="service-text-premium"><span class="highlight">Build a strong financial foundation from the first interaction</span> with accurate patient intake and real-time eligibility verification. By minimizing front-end errors, we help you prevent claim rejections and ensure a <span class="highlight">seamless, stress-free patient experience</span>.</p>
             </div>
         </div>
-
         <div class="service-row">
             <div class="service-image"><img src="images/bills.jpg" loading="lazy" alt="Billing"></div>
             <div class="service-text">
                 <span class="service-badge">Revenue Acceleration</span>
-                <h3>Billing & A/R Management</h3>
+                <h3>Billing &amp; A/R Management</h3>
                 <p class="service-text-premium"><span class="highlight">Take full control of your revenue flow</span> with intelligent billing and proactive follow-ups. We reduce aging receivables, resolve denials faster, and ensure <span class="highlight">timely collections that strengthen financial stability</span>.</p>
             </div>
         </div>
-
         <div class="service-row reverse">
             <div class="service-image"><img src="images/medical%20documentation.jpg" loading="lazy" alt="Medical Coding"></div>
             <div class="service-text">
-                <span class="service-badge">Compliance & Accuracy</span>
-                <h3>Medical Coding & Documentation</h3>
+                <span class="service-badge">Compliance &amp; Accuracy</span>
+                <h3>Medical Coding &amp; Documentation</h3>
                 <p class="service-text-premium"><span class="highlight">Ensure precision and compliance in every claim</span> with expert-led coding and documentation. Our approach minimizes audit risks, improves claim accuracy, and drives <span class="highlight">faster reimbursements with complete regulatory confidence</span>.</p>
             </div>
         </div>
-
         <div class="service-row">
             <div class="service-image"><img src="images/provider.jpg" loading="lazy" alt="Provider Credentialing"></div>
             <div class="service-text">
@@ -262,6 +336,71 @@
         </div>
     </div>
 </section>
+
+<!-- UPGRADE 7: HIPAA Compliance & Security trust section -->
+<!--<section class="compliance" id="compliance">-->
+<!--    <div class="container">-->
+<!--        <div class="compliance-inner">-->
+<!--            <div class="compliance-text">-->
+<!--                <span class="section-eyebrow light">Security &amp; Compliance</span>-->
+<!--                <h2>Built for Healthcare's Strictest Standards</h2>-->
+<!--                <p class="compliance-desc">Healthcare billing involves some of the most sensitive data in existence. HealRev is built from the ground up to protect your patients' information and keep your practice fully compliant — no exceptions.</p>-->
+<!--                <ul class="compliance-list">-->
+<!--                    <li>-->
+<!--                        <span class="comp-icon">🛡️</span>-->
+<!--                        <div>-->
+<!--                            <strong>HIPAA Compliant</strong>-->
+<!--                            <span>All data handling, storage, and transmission fully adheres to HIPAA Privacy and Security Rules.</span>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <span class="comp-icon">📋</span>-->
+<!--                        <div>-->
+<!--                            <strong>BAA Provided</strong>-->
+<!--                            <span>We sign a Business Associate Agreement (BAA) with every client — required and guaranteed.</span>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <span class="comp-icon">🔒</span>-->
+<!--                        <div>-->
+<!--                            <strong>256-bit Encryption</strong>-->
+<!--                            <span>All data encrypted in transit and at rest. Role-based access controls on every account.</span>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <span class="comp-icon">✅</span>-->
+<!--                        <div>-->
+<!--                            <strong>Regular Audits</strong>-->
+<!--                            <span>Independent compliance audits and staff training conducted on an ongoing basis.</span>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="compliance-badges">-->
+<!--                <div class="comp-badge-card">-->
+<!--                    <div class="comp-badge-icon">🛡️</div>-->
+<!--                    <div class="comp-badge-label">HIPAA</div>-->
+<!--                    <div class="comp-badge-sub">Compliant</div>-->
+<!--                </div>-->
+<!--                <div class="comp-badge-card">-->
+<!--                    <div class="comp-badge-icon">🔒</div>-->
+<!--                    <div class="comp-badge-label">SOC 2</div>-->
+<!--                    <div class="comp-badge-sub">Type II</div>-->
+<!--                </div>-->
+<!--                <div class="comp-badge-card">-->
+<!--                    <div class="comp-badge-icon">⚕️</div>-->
+<!--                    <div class="comp-badge-label">HL7 / FHIR</div>-->
+<!--                    <div class="comp-badge-sub">Ready</div>-->
+<!--                </div>-->
+<!--                <div class="comp-badge-card">-->
+<!--                    <div class="comp-badge-icon">📋</div>-->
+<!--                    <div class="comp-badge-label">ICD-10</div>-->
+<!--                    <div class="comp-badge-sub">Certified</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 <!-- ================= TESTIMONIALS ================= -->
 <section class="testimonials" id="testimonials">
@@ -295,11 +434,75 @@
     </div>
 </section>
 
-<!-- ================= CTA ================= -->
+<!-- ================= CTA — UPGRADE 4: Fixed contrast ================= -->
 <section class="cta">
     <div class="container cta-content">
         <h2>Let's Simplify Your Billing Process</h2>
-        <button class="primary-btn demo-trigger">Book Free Demo</button>
+        <p class="cta-sub">Join healthcare organizations across the country who trust HealRev to protect and grow their revenue.</p>
+        <div class="cta-buttons">
+            <button class="cta-btn-primary demo-trigger">Book a Free Demo</button>
+            <a href="mailto:Officehealrev@gmail.com" class="cta-btn-ghost">Email Us Directly</a>
+        </div>
+    </div>
+</section>
+
+<!-- UPGRADE 8: Dedicated Contact section -->
+<section class="contact-section" id="contact">
+    <div class="container contact-inner">
+        <div class="contact-info">
+            <span class="section-eyebrow">Get in Touch</span>
+            <h2>Ready to Optimize Your Revenue Cycle?</h2>
+            <p class="contact-desc">Whether you're a solo practice or a hospital network, our team will respond within 24 hours with a tailored assessment of your billing needs.</p>
+            <ul class="contact-details">
+                <li>
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <strong>Email</strong>
+                        <a href="mailto:Officehealrev@gmail.com">Officehealrev@gmail.com</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <strong>Office</strong>
+                        <span>2435 Sector 66, Mohali 160055, India</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="contact-icon">⏱️</span>
+                    <div>
+                        <strong>Response Time</strong>
+                        <span>We respond to all enquiries within 24 business hours</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="contact-form-wrap">
+            <form class="contact-form" action="https://formsubmit.co/Officehealrev@gmail.com" method="POST">
+                <input type="hidden" name="_next" value="https://healrev.com/thankyou.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Contact Enquiry — HealRev">
+                <div class="cf-row">
+                    <div class="cf-group">
+                        <input type="text" name="name" placeholder=" " required>
+                        <label>Full Name</label>
+                    </div>
+                    <div class="cf-group">
+                        <input type="email" name="email" placeholder=" " required>
+                        <label>Email Address</label>
+                    </div>
+                </div>
+                <div class="cf-group">
+                    <input type="text" name="practice" placeholder=" " required>
+                    <label>Practice / Organization Name</label>
+                </div>
+                <div class="cf-group">
+                    <textarea name="message" placeholder=" " rows="4" required></textarea>
+                    <label>How can we help?</label>
+                </div>
+                <button type="submit" class="cf-submit">Send Message →</button>
+            </form>
+        </div>
     </div>
 </section>
 
@@ -319,7 +522,7 @@
             <h4>Our Company</h4>
             <p>Officehealrev@gmail.com</p>
             <p>+91 XXXXX XXXXX</p>
-            <p>2435 sector 66 Mohali 160055, India</p>
+            <p>2435 Sector 66 Mohali 160055, India</p>
         </div>
         <div>
             <h4>Our Solutions</h4>
@@ -349,51 +552,38 @@
 </footer>
 
 <!-- ================= DEMO MODAL ================= -->
-<!--
-    FIX: Input comes BEFORE label so CSS sibling selector (~) works.
-    Each input has placeholder=" " (single space) so :not(:placeholder-shown) works.
--->
 <div id="demoModal" class="modal">
     <div class="modal-content large">
         <span class="close" onclick="closeModal()">&times;</span>
         <h2>Schedule a Demo</h2>
-
         <form class="demo-form" action="https://formsubmit.co/Officehealrev@gmail.com" method="POST">
             <input type="hidden" name="_next" value="https://healrev.com/thankyou.html">
             <input type="hidden" name="_captcha" value="false">
-
             <div class="form-grid">
-
                 <div class="input-group">
                     <input type="text" name="company_name" placeholder=" " required>
                     <label>Company Name</label>
                 </div>
-
                 <div class="input-group">
                     <input type="text" name="speciality" placeholder=" " required>
                     <label>Speciality</label>
                 </div>
-
                 <div class="input-group">
                     <input type="text" name="first_name" placeholder=" " required>
                     <label>First Name</label>
                 </div>
-
                 <div class="input-group">
                     <input type="text" name="last_name" placeholder=" " required>
                     <label>Last Name</label>
                 </div>
-
                 <div class="input-group">
                     <input type="tel" name="telephone" placeholder=" " required>
                     <label>Phone Number</label>
                 </div>
-
                 <div class="input-group">
                     <input type="email" name="email" placeholder=" " required>
                     <label>Email *</label>
                 </div>
-
                 <div class="input-group">
                     <select name="providers" required>
                         <option value="" disabled selected hidden></option>
@@ -403,7 +593,6 @@
                     </select>
                     <label>Number of Providers</label>
                 </div>
-
                 <div class="input-group">
                     <select name="location" required>
                         <option value="" disabled selected hidden></option>
@@ -413,14 +602,11 @@
                     </select>
                     <label>Number of Locations</label>
                 </div>
-
             </div>
-
             <div class="input-group full">
                 <textarea name="resource" placeholder=" " required></textarea>
                 <label>Where did you hear about us?</label>
             </div>
-
             <button type="submit">Book Free Demo</button>
         </form>
     </div>
